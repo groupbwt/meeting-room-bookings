@@ -5,7 +5,7 @@ import {Flex, Box} from '@rebass/grid'
 
 import styles from './Body.module.scss';
 
-export default class Header extends React.Component {
+export default class Body extends React.Component {
 	static propTypes = {
 		children: PropTypes.node,
 		sidebar: PropTypes.node,
