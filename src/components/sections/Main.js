@@ -16,6 +16,7 @@ export default class Main extends React.Component {
 	};
 
 	static defaultCalendarOptions = {
+		plugins: [dayGridPlugin, timeGridPlugin, listPlugin, googleCalendarPlugin],
 		header: {
 			left: 'prev,next today',
 			center: 'title',
@@ -43,10 +44,8 @@ export default class Main extends React.Component {
 	}
 
 	render() {
-		const {calendarOptions} = this.state;
-
 		return (
-			<FullCalendar plugins={[dayGridPlugin, timeGridPlugin, listPlugin, googleCalendarPlugin]} {...calendarOptions}/>
+			<FullCalendar {...this.state.calendarOptions}/>
 		)
 	}
 }
