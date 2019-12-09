@@ -39,7 +39,7 @@ export default class Body extends React.Component {
 					)
 				}
 
-				<Box flex='1 1 auto'>
+				<Box className={styles.content} flex='1'>
 					{children}
 				</Box>
 			</Flex>

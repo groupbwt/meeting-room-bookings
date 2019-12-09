@@ -16,12 +16,18 @@ export default class App extends React.Component {
 			settingsDialogOptions: {
 				icon: "cog",
 				title: "Settings"
+			},
+			calendarOptions: {
+				googleCalendarApiKey: process.env.REACT_APP_GOOGLE_CALENDAR_API_KEY,
+				events: {
+					googleCalendarId: process.env.REACT_APP_GOOGLE_CALENDAR_ID,
+				}
 			}
 		};
 	}
 
 	render() {
-		const {title, navbarFixedToTop, settingsDialogOptions} = this.state;
+		const {title, navbarFixedToTop, settingsDialogOptions, calendarOptions} = this.state;
 
 		return (
 			<React.Fragment>
@@ -30,7 +36,7 @@ export default class App extends React.Component {
 				</Header>
 
 				<Body offsetTop={navbarFixedToTop} sidebarWidth={230} sidebar={<Sidebar/>}>
-					<Main/>
+					<Main calendarOptions={calendarOptions}/>
 				</Body>
 			</React.Fragment>
 		)
