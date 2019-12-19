@@ -5,7 +5,7 @@ export default class Sidebar extends React.Component {
 		// @todo: add sidebar content
 		return (
 			<React.Fragment>
-				Sidebar
+				{this.props.children}
 			</React.Fragment>
 		)
 	}
